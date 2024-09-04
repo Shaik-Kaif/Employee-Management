@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard-style.css">
+    <title>Emanage</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    
+    <div class="dashboard-container">
+        <div class="dashboard-navbar">
+            <ul>
+                <li><img src="favicon.png"  class="logo" alt="Emanage Logo"></li>
+                <li>Home</li>
+                <li>Employee-List</li>
+                
+                <li class="li-3"><span id="userName">name not displayed</span><button class="log-btn">Log-out</button></li>
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="container">
+            <!-- Header Section -->
+            <div class="button-container">
+                <div class="employee-count" id="employee-count">Total Employees: 0</div>
+                <button class="add-btn" id="create-employee-btn">Create Employee</button>
+            </div>
+    
+            <!-- Search and Sort Section -->
+            <div class="search-sort-container">
+                <label for="search-bar" style="color:#fff">Search:</label>
+                <input type="text" id="search-bar" placeholder="Search...">
+                <button id="sort-id" class="sort-btn">Sort by ID</button>
+        <button id="sort-email" class="sort-btn">Sort by Email</button>
+            </div>
+    
+            <!-- Table Section -->
+            <table class="data-table" id="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Photo</th>
+                        <th>Email</th>
+                        <th>Mobile Number</th>
+                        <th>Designation</th>
+                        <th>Gender</th>
+                        <th>Course</th>
+                        <th>Create Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be appended here -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Popup Form -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <button class="close-btn" id="close-btn">X</button>
+                <div class="popup-header">Information Form</div>
+                <form id="info-form" class="popup-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" id="email-error"></div>
+    
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                    <div class="error" id="mobile-error"></div>
+    
+                    <label for="designation">Designation:</label>
+                    <select id="designation" name="designation" required>
+                        <option value="" disabled selected>Select Designation</option>
+                        <option value="Software Developer">Software Developer</option>
+                        <option value="Front-End Developer">Front-End Developer</option>
+                        <option value="Java Developer">Java Developer</option>
+                        <option value="Tester">Tester</option>
+                    </select>
+    
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+    
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="B.Com">B.Com</option>
+                        <option value="BSC">BSC</option>
+                    </select>
+    
+                    <label for="image">Upload Image (PNG/JPG):</label>
+                    <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                    <div class="error" id="image-error"></div>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+          
+    <script src="dashboard-script.js" type="module"></script>
+</body>
+</html>
